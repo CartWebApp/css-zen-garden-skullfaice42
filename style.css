@@ -1,5 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
 /* Empty file for template. Remember to edit only this file and not the HTML file */
 .preamble{
     background-color: rgb(105, 11, 11);
     /* this is just to test the repo */
+}
+.page-wrapper{
+    background-image: url(moveis\ image.jpg);
+    background-repeat: no-repeat;
+    justify-content: center;
+    background-size: cover;
+}
+header[role="banner"] h1 {
+    
+    background-color: #332827;
+    padding: .5em 2.5em;
+    /* justify-content: center; */
+    text-align: center;
+    justify-self: center;
+    /* justify-content: center; */
+    align-self: center;
+    color: #F53E30;
+    font-family: "Knewave", system-ui;
+    border-radius: 20px;
+    font-size: 50px;
+}
+header{
+    /* display: flex; */
+    align-self: center;
 }
