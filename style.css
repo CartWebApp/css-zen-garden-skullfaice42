@@ -1,30 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
 /* Empty file for template. Remember to edit only this file and not the HTML file */
 .preamble{
     background-color: rgb(105, 11, 11);
     /* this is just to test the repo */
 }
-.page-wrapper{
-    background-image: url(moveis\ image.jpg);
+#css-zen-garden{
+    margin: 0 auto;
+    padding: 0px;
+}
+.page-wrapper {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('moveis image.jpg');
     background-repeat: no-repeat;
     justify-content: center;
     background-size: cover;
+    background-color: hsla(0, 0%, 0%, 0.459);
+}
+header[role="banner"]{
+    text-align: center;
 }
 header[role="banner"] h1 {
-    
+    display: flex;
     background-color: #332827;
-    padding: .5em 2.5em;
-    /* justify-content: center; */
-    text-align: center;
-    justify-self: center;
-    /* justify-content: center; */
-    align-self: center;
+    padding: .5em 3em;
+    margin: 0 30px;
     color: #F53E30;
-    font-family: "Knewave", system-ui;
+    font-family: "Lobster", sans-serif;
     border-radius: 20px;
     font-size: 50px;
+
+    background-image: url('soda guy.png'), url('soda guy.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 10% center, 120% center; /* Position one image to the left and the other to the right */
+    background-size: 200px auto;
+    
 }
+
+
 header{
     /* display: flex; */
     align-self: center;
+    justify-self: center;
+    justify-content: center;
+
+
+}
+header h2{
+    font-family: "Montserrat", sans-serif;
+    background-color: #CA534A;
+    display: inline-block;
+    /* text-decoration: none; */
+    /* margin: 0 auto; */
+    text-align: center;
+    margin: 1%  auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+#zen-summary{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center; /* Center content vertically within the container */
+    justify-content: center; /* Center items horizontally */
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+
+a[href="/examples/index"] {
+    color: blue; /* Example style for the HTML file */
+    text-decoration: underline; /* Example style */
+}
+
+/* Style for the link to the CSS file */
+a[href="/examples/style.css"] {
+    color: green; /* Example style for the CSS file */
+    font-weight: bold; /* Example style */
+}
+
+
+.summary p:nth-of-type(1){
+    background-color: black;
+    margin-left: 20px;
+    width: 40%;
+    height: 30px;
+}
+.summary p:nth-of-type(2){
+    background-color: #CA534A;
+    /* margin-left: 10px; */
+    width: 412px;
+    height: 218px;
+    justify-content: center;
+    /* text-align: center; */
 }
