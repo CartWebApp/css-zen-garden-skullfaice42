@@ -26,17 +26,17 @@ header[role="banner"]{
 header[role="banner"] h1 {
     display: flex;
     background-color: #332827;
-    padding: .5em 3em;
+    padding: .5em 3em; /* here*/
     margin: 0 30px;
     color: #F53E30;
     font-family: "Lobster", sans-serif;
     border-radius: 20px;
     font-size: 50px;
 
-    background-image: url('soda guy.png'), url('soda guy.png');
+    background-image: url('popcorn.png'), url('popcorn.png');
     background-repeat: no-repeat, no-repeat;
-    background-position: 10% center, 120% center; /* Position one image to the left and the other to the right */
-    background-size: 200px auto;
+    background-position: 8% center, 95% center; /* Position one image to the left and the other to the right */
+    background-size: 100px auto;
     
 }
 
@@ -70,31 +70,73 @@ header h2{
     text-align: center;
 
 }
-
+.intro [role="banner"]{
+    display: flex;
+    flex-direction: column;
+}
 
 a[href="/examples/index"] {
     color: blue; /* Example style for the HTML file */
     text-decoration: underline; /* Example style */
+    /* background-color: black; */
 }
 
 /* Style for the link to the CSS file */
 a[href="/examples/style.css"] {
     color: green; /* Example style for the CSS file */
     font-weight: bold; /* Example style */
+    background-image: black;
 }
 
-
+/* this is the Right one */
 .summary p:nth-of-type(1){
-    background-color: black;
-    margin-left: 20px;
-    width: 40%;
-    height: 30px;
-}
-.summary p:nth-of-type(2){
     background-color: #CA534A;
+    border-radius: 10px;
+    margin-left: 20px;
+    width: 281px;
+    height: 125px;
+    text-align: left;
+    justify-content: center;
+    padding: 2px;
+    /* alright, here you want to make sure
+     you can use padding bc content like this is
+     not it */
+}
+/* This is the Left one */
+.summary p:nth-of-type(2){
+    line-height: 2em;
+    border-radius: 10px;
+    background-color: #CA534A;
+    display: flex;
+    flex-direction: column;
     /* margin-left: 10px; */
-    width: 412px;
-    height: 218px;
+    max-width: 412px;
+    max-height: 218px;
     justify-content: center;
     /* text-align: center; */
 }
+.summary p:nth-of-type(2) a {
+    color: blue; /* Ensures color consistency */
+    font-weight: bold;
+    text-decoration: underline;
+    /* align-items: center; */
+}
+.preamble[role="article"] h3{
+    background-color: #CA534A;
+    display: inline;
+    border-radius: 10px;
+    padding: 2px; /*Fix this to whatever... PADDING*/
+    transform: rotate(-90deg);
+    margin-left: 50px; /*this is how to get the spacing for LEFT*/
+    transform-origin: left top; /* Adjusts rotation pivot point */
+    display: inline-block; /* needs in order to work */
+}
+
+
+p [role="contentinfo"]{
+    background-color: black;
+}
+
+
+
+/* here is the end of it all... doin this cause im outtta tiem */
