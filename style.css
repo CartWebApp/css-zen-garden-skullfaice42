@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
+* {
+    margin: 0;
+    padding: 0 auto;
+}
 
 /* Empty file for template. Remember to edit only this file and not the HTML file */
-.preamble{
-    background-color: rgb(105, 11, 11);
-    /* this is just to test the repo */
-}
+
 #css-zen-garden{
     margin: 0 auto;
     padding: 0px;
@@ -131,8 +131,35 @@ a[href="/examples/style.css"] {
     transform-origin: left top; /* Adjusts rotation pivot point */
     display: inline-block; /* needs in order to work */
 }
-
-
+.preamble[role="article"] p{
+    /* if you want to edit the TEXT... do tha there */
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    padding: 10px;
+    border-radius: 8px;
+    transform: translate(-20px, -20px);
+    /* above is where its curentelly LOCATED */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    background: #332827;
+    color: #CA534A;
+    /* background: linear-gradient(to left, red, white, blue); */
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+.preamble{
+    /* background-color: rgb(105, 11, 11); */
+    /* this is just to test the repo */
+    margin-top: 100px;
+}
+.preamble:hover p{
+    transform: translate(120px, -240px);
+    /* when you are changing the direction of it,,, its here */
+    opacity: 1;
+    /* transform: rotate(90deg); */
+}
 p [role="contentinfo"]{
     background-color: black;
 }
