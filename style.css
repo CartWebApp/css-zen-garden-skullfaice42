@@ -13,6 +13,9 @@
     margin: 0 auto;
     padding: 0px;
 }
+a{
+    color: black;
+}
 .page-wrapper {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('moveis image.jpg');
     background-repeat: no-repeat;
@@ -76,7 +79,6 @@ header h2{
 }
 
 a[href="/examples/index"] {
-    color: blue; /* Example style for the HTML file */
     text-decoration: underline; /* Example style */
     /* background-color: black; */
 }
@@ -116,7 +118,6 @@ a[href="/examples/style.css"] {
     /* text-align: center; */
 }
 .summary p:nth-of-type(2) a {
-    color: blue; /* Ensures color consistency */
     font-weight: bold;
     text-decoration: underline;
     /* align-items: center; */
@@ -164,12 +165,51 @@ p [role="contentinfo"]{
 }
 
 /* here will be where the caracal is being heald */
-
+.supporting{
+    width: 400px;
+    overflow: hidden;
+    /* background-color: black; */
+}
+.main{
+    /* display: flex; */
+    background-color: black;
+    border-radius: 10px;
+    /* justify-content: center; */
+    width: calc(300px * 4);
+    /* width: 300px; */
+    overflow: hidden;
+    animation: scroll 5s linear infinite;
+}
+/* Keyframes for continuous scroll */
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-300px);
+    }
+    50% {
+      transform: translateX(-600px);
+    }
+    75% {
+      transform: translateX(-900px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
 #zen-supporting{
+    /* overflow: hidden; */
+    /* width: 300px; */
+    /* height: 300px; */
     display: flex;
+    flex-wrap: wrap;
+    /* needed above to get footer to go down */
     justify-content: space-around;
 }
 .explanation, .participation, .benefits, .requirements{
+    margin-top: 10px;
     background-color: #CA534A;
     color: black;
     width: 225px;
@@ -178,12 +218,15 @@ p [role="contentinfo"]{
     border-radius: 10px;
     padding: 2px;
 }
+
 .main h3{
     /* background-color: black; */
     font-size: 2rem;
 }
 footer{
     display: flex;
+    width: 100%;
+    /* flex-wrap: wrap; */
     /* bruh im stuck here :sob: */
 }
 
@@ -193,7 +236,8 @@ footer{
 /* start on the 'seclect a designer' */
 /* General layout for the design selection container */
 #design-selection {
-    background-color: #8B3E3E; /* Dark red background color */
+    background-color: #755452; /* Dark red background color */
+    color: black;
     padding: 20px;
     border-radius: 15px; /* Rounded corners */
     width: 300px;
@@ -205,7 +249,6 @@ footer{
 /* Header styling */
 #design-selection .select {
     font-size: 1.2em;
-    color: #FFD2B0; /* Lighter color for the header */
     margin-bottom: 15px;
 }
 
@@ -221,10 +264,11 @@ footer{
 
 /* Styling for individual list items */
 #design-selection ul li {
-    width: 45%; /* To create two columns */
+    /* text-align: left; */
+    width: 300px; /* To create two columns */
     margin: 5px;
     padding: 10px;
-    background-color: #D55656; /* Lighter red for buttons */
+    background-color: #CA534A; /* Lighter red for buttons */
     border-radius: 10px;
     text-align: center;
 }
@@ -232,25 +276,32 @@ footer{
 /* Link styling */
 #design-selection a {
     text-decoration: none;
-    color: #FFD2B0; /* Lighter color for text */
     font-weight: bold;
 }
 
 /* Separate styling for design names and designer names */
 .design-name {
-    display: block;
+    /* display: block; */
     font-size: 0.9em;
 }
 
 .designer-name {
-    display: block;
+    /* display: block; */
     font-size: 0.8em;
     font-style: italic;
+}
+.design-selection h3{
+    background-color:#CA534A ;
+    border-radius: 10px;
+    width: 200px;
+    /* width: auto; */
+    margin: 0 auto;
+    justify-content: center;
 }
 
 /* Hover effect for buttons */
 #design-selection ul li:hover {
-    background-color: #A64040; /* Darker shade on hover */
-    transition: background-color 0.3s ease;
+    background-color: #8f1e16; /* Darker shade on hover */
+    transition: background-color .4s ease;
 }
 /* here is the end of it all... doin this cause im outtta tiem */
