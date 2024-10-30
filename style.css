@@ -4,7 +4,7 @@
 
 * {
     margin: 0;
-    padding: 0 auto;
+    /* padding: 0; */
 }
 
 /* Empty file for template. Remember to edit only this file and not the HTML file */
@@ -140,14 +140,13 @@ a[href="/examples/style.css"] {
     line-height: 1.2em;
     padding: 10px;
     border-radius: 8px;
-    transform: translate(-20px, -20px);
+    transform: translate(-300px, -20px) rotate(-90deg);
     /* above is where its curentelly LOCATED */
     transition: transform 0.3s ease, opacity 0.3s ease;
     background: #332827;
     color: #CA534A;
     /* background: linear-gradient(to left, red, white, blue); */
-    opacity: 0;
-    transform: rotate(-90deg);
+    /* opacity: 0; */
 }
 .preamble{
     /* background-color: rgb(105, 11, 11); */
@@ -164,6 +163,94 @@ p [role="contentinfo"]{
     background-color: black;
 }
 
+/* here will be where the caracal is being heald */
+
+#zen-supporting{
+    display: flex;
+    justify-content: space-around;
+}
+.explanation, .participation, .benefits, .requirements{
+    background-color: #CA534A;
+    color: black;
+    width: 225px;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 2px;
+}
+.main h3{
+    /* background-color: black; */
+    font-size: 2rem;
+}
+footer{
+    display: flex;
+    /* bruh im stuck here :sob: */
+}
 
 
+/* caracal ends here */
+
+/* start on the 'seclect a designer' */
+/* General layout for the design selection container */
+#design-selection {
+    background-color: #8B3E3E; /* Dark red background color */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Header styling */
+#design-selection .select {
+    font-size: 1.2em;
+    color: #FFD2B0; /* Lighter color for the header */
+    margin-bottom: 15px;
+}
+
+/* Styling for the list items */
+#design-selection ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Styling for individual list items */
+#design-selection ul li {
+    width: 45%; /* To create two columns */
+    margin: 5px;
+    padding: 10px;
+    background-color: #D55656; /* Lighter red for buttons */
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Link styling */
+#design-selection a {
+    text-decoration: none;
+    color: #FFD2B0; /* Lighter color for text */
+    font-weight: bold;
+}
+
+/* Separate styling for design names and designer names */
+.design-name {
+    display: block;
+    font-size: 0.9em;
+}
+
+.designer-name {
+    display: block;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+/* Hover effect for buttons */
+#design-selection ul li:hover {
+    background-color: #A64040; /* Darker shade on hover */
+    transition: background-color 0.3s ease;
+}
 /* here is the end of it all... doin this cause im outtta tiem */
