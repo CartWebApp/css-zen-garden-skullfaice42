@@ -304,4 +304,91 @@ footer{
     background-color: #8f1e16; /* Darker shade on hover */
     transition: background-color .4s ease;
 }
+
+.design-archives{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #755452;
+    width: 300px;
+    height: 260px;
+    border-radius: 10px;
+    justify-self: center;
+    /* text-decoration: none; */
+    text-align: center;
+    /* text-decoration: ; */
+    /* justify-content: space-around; */
+
+}
+.archives{
+    background-color: #CA534A;
+    width: fit-content;
+    display: flex;
+    align-self: center;
+    padding: 4px;
+    border-radius: 10px;
+}
+.design-archives ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+}
+.design-archives li{
+    height: 100px;
+    justify-content:space-around;
+}
+.next a{
+    background-color: #CA534A;
+    padding: 4px;
+    border-radius: 30px;
+    width: 150px;
+    margin-left: 30px;
+}
+.viewall a{
+    background-color: #CA534A;
+    padding: 4px;
+    border-radius: 30px;
+    width: 150px;
+    margin-left: 30px
+}
+.next, .viewall {
+    z-index: 1;
+    padding-left: 32px;
+    background-image: url('true-soda-guy.png'); /* Add image as a background */
+    background-repeat: no-repeat;
+    background-position: 0 50%; /* Center the image vertically */
+    background-size: 60px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 /* here is the end of it all... doin this cause im outtta tiem */
+/* resorces here bby */
+.zen-resources{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #755452; */
+    justify-self: center;
+    width: 800px;
+}
+.zen-resources h3{
+    background-color: #CA534A;
+    padding: 4px;
+    text-align: center;
+    border-radius: 10px;
+    /* justify-content: center; */
+    margin: 0 auto;
+    width: 300px;
+    margin-bottom: 20px;
+}
+.zen-resources ul >*{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    border-radius: 10px;
+    background-color: #755452;
+    justify-content: space-around;
+    /* margin-bottom: 1000px; */
+}
