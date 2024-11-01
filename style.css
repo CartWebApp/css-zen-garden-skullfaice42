@@ -15,6 +15,8 @@
 }
 a{
     color: black;
+    text-decoration: none;
+    /* couldent do it :sob: */
 }
 .page-wrapper {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('moveis image.jpg');
@@ -23,8 +25,18 @@ a{
     background-size: cover;
     background-color: hsla(0, 0%, 0%, 0.459);
 }
+div + h1{
+    background-color: black;
+    margin: 0 auto;
+
+}
 header[role="banner"]{
     text-align: center;
+}
+[role="banner"]{
+    background-color: #332827;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 header[role="banner"] h1 {
     display: flex;
@@ -68,12 +80,13 @@ header h2{
     flex-direction: row-reverse;
     align-items: center; /* Center content vertically within the container */
     justify-content: center; /* Center items horizontally */
-    width: 60%;
+    width: 40%;
+    height: 200px;
     margin: 0 auto;
     text-align: center;
 
 }
-.intro [role="banner"]{
+.page-wrapper .intro [role="banner"]{
     display: flex;
     flex-direction: column;
 }
@@ -89,7 +102,11 @@ a[href="/examples/style.css"] {
     font-weight: bold; /* Example style */
     background-image: black;
 }
-
+.summary{
+    background-color: #332827;
+    border-radius: 10px;
+    /* width: 200px; */
+}
 /* this is the Right one */
 .summary p:nth-of-type(1){
     background-color: #CA534A;
@@ -117,6 +134,10 @@ a[href="/examples/style.css"] {
     justify-content: center;
     /* text-align: center; */
 }
+.intro.summery {
+    background-color: #332827; /* Gold background for demonstration */
+    /* this did something alrught... hmh yup */
+}
 .summary p:nth-of-type(2) a {
     font-weight: bold;
     text-decoration: underline;
@@ -124,7 +145,6 @@ a[href="/examples/style.css"] {
 }
 .preamble[role="article"] h3{
     background-color: #CA534A;
-    display: inline;
     border-radius: 10px;
     padding: 2px; /*Fix this to whatever... PADDING*/
     transform: rotate(-90deg);
@@ -160,6 +180,9 @@ a[href="/examples/style.css"] {
     opacity: 1;
     /* transform: rotate(90deg); */
 }
+[role]{
+    opacity: 1;
+}
 p [role="contentinfo"]{
     background-color: black;
 }
@@ -170,15 +193,21 @@ p [role="contentinfo"]{
     overflow: hidden;
     /* background-color: black; */
 }
-.main{
-    /* display: flex; */
+p .intro{
     background-color: black;
+    margin: 0 auto;
+}
+.main{
+    margin: 0 auto;
+    /* display: flex; */
+    background-color: #755452;
+    cursor: pointer;
     border-radius: 10px;
     /* justify-content: center; */
     width: calc(300px * 4);
     /* width: 300px; */
     overflow: hidden;
-    animation: scroll 5s linear infinite;
+    /* animation: scroll 5s linear infinite; */
 }
 /* Keyframes for continuous scroll */
 @keyframes scroll {
@@ -222,36 +251,51 @@ p [role="contentinfo"]{
 .main h3{
     /* background-color: black; */
     font-size: 2rem;
+    color: rgb(37, 23, 100);
 }
 footer{
+    justify-content: space-around;
     display: flex;
     width: 100%;
     /* flex-wrap: wrap; */
     /* bruh im stuck here :sob: */
 }
-
+footer a{
+    background-color: #332827;
+    padding: 10px;
+    border-radius: 10px;
+}
 
 /* caracal ends here */
 
 /* start on the 'seclect a designer' */
 /* General layout for the design selection container */
+
 #design-selection {
+    /* justify-content: flex-start; */
     background-color: #755452; /* Dark red background color */
     color: black;
     padding: 20px;
     border-radius: 15px; /* Rounded corners */
     width: 300px;
-    margin: 20px auto;
+    /* margin: 20px auto; */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
-
+a, a[href="/examples/index"], a[href="/examples/style.css"] {
+    text-decoration: underline;
+    color: black; /* For the CSS link */
+    font-weight: bold;
+}
 /* Header styling */
 #design-selection .select {
     font-size: 1.2em;
     margin-bottom: 15px;
 }
-
+div ~ p{
+    background-color: black;
+    font-size: 10px;
+}
 /* Styling for the list items */
 #design-selection ul {
     list-style: none;
@@ -298,8 +342,93 @@ footer{
     margin: 0 auto;
     justify-content: center;
 }
+/* this is how to get the little pop up thing */
 
-/* Hover effect for buttons */
+
+
+
+.explanation h3:hover::before{
+    content: "Alright ";
+}
+
+
+
+
+
+.explanation h3:hover::after
+/* .explanation p:hover::after */
+{
+    /* display: block; */
+    justify-content: center;
+    color: black;
+    width: 600px;
+    content: "There is a continuing need to show the power of CSS. The Zen Garden aims to excite, inspire, and encourage participation. To begin, view some of the existing designs in the list. Clicking on any one will load the style sheet into this very page. The HTML remains the same, the only thing that has changed is the external CSS file. Yes, really. CSS allows complete and total control over the style of a hypertext document. The only way this can be illustrated in a way that gets people excited is by demonstrating what it can truly be, once the reins are placed in the hands of those able to create beauty from structure. Designers and coders alike have contributed to the beauty of the web; we can always push it further.";
+    
+    /* content: ""; */
+    display: block;
+    position: absolute;
+    /* the wooooo meme */
+    /* width: 3000px; */
+    overflow: visible;
+    background-color: aqua;
+    /* cursor: pointer; */
+}
+.participation h3:hover::after{
+content: "Strong visual design has always been our focus. You are modifying this page, so strong CSS skills are necessary too, but the example files are commented well enough that even CSS novices can use them as starting points. Please see the CSS Resource Guide for advanced tutorials and tips on working with CSS. You may modify the style sheet in any way you wish, but not the HTML. This may seem daunting at first if you’ve never worked this way before, but follow the listed links to learn more, and use the sample files as a guide. Download the sample HTML and CSS to work on a copy locally. Once you have completed your masterpiece (and please, don’t submit half-finished work) upload your CSS file to a web server under your control. Send us a link to an archive of that file and all associated assets, and if we choose to use it we will download it and place it on our server.";
+justify-content: center;
+color: black;
+width: 600px;
+    /* content: ""; */
+    display: block;
+    position: absolute;
+    /* the wooooo meme */
+    /* width: 3000px; */
+    overflow: visible;
+    background-color: aqua;
+    /* cursor: pointer; */
+}
+.benefits h3:hover::after{
+    content: "Why participate? For recognition, inspiration, and a resource we can all refer to showing people how amazing CSS really can be. This site serves as equal parts inspiration for those working on the web today, learning tool for those who will be tomorrow, and gallery of future techniques we can all look forward to.";
+   justify-content: center;
+    width: 600px;
+    color: black;
+        /* content: ""; */
+        display: block;
+        position: absolute;
+        /* the wooooo meme */
+        /* width: 3000px; */
+        overflow: visible;
+        background-color: aqua;
+        /* cursor: pointer; */
+    }
+    .requirements h3:hover::after{
+        content: "CSS 3 & 4 should be limited to widely-supported elements only, or strong fallbacks should be provided. The CSS Zen Garden is about functional, practical CSS and not the latest bleeding-edge tricks viewable by 2% of the browsing public. The only real requirement we have is that your CSS validates. Luckily, designing this way shows how well various browsers have implemented CSS by now. When sticking to the guidelines you should see fairly consistent results across most modern browsers. Due to the sheer number of user agents on the web these days — especially when you factor in mobile — pixel-perfect layouts may not be possible across every platform. That’s okay, but do test in as many as you can. Your design should work in at least IE9+ and the latest Chrome, Firefox, iOS, and Android browsers (run by over 90% of the population). We ask that you submit original artwork. Please respect copyright laws. Please keep objectionable material to a minimum, and try to incorporate unique and interesting visual themes to your work. We’re well past the point of needing another garden-related design. This is a learning exercise as well as a demonstration. You retain full copyright on your graphics (with limited exceptions, see submission guidelines), but we ask you release your CSS under a Creative Commons license identical to the one on this site so that others may learn from your work.";
+    justify-content: center;
+        width: 600px;
+        color: black;
+            /* content: ""; */
+            display: block;
+            position: absolute;
+            /* the wooooo meme */
+            /* width: 3000px; */
+            overflow: visible;
+            background-color: aqua;
+            /* cursor: pointer; */
+        }
+
+
+
+
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+
+
+
 #design-selection ul li:hover {
     background-color: #8f1e16; /* Darker shade on hover */
     transition: background-color .4s ease;
@@ -365,30 +494,34 @@ footer{
 }
 /* here is the end of it all... doin this cause im outtta tiem */
 /* resorces here bby */
-.zen-resources{
+.zen-resources {
     margin-top: 30px;
     display: flex;
-    flex-direction: column;
-    /* background-color: #755452; */
+    flex-direction: column; /* Keep this as column for the main container */
     justify-self: center;
-    width: 800px;
+    width: 100%;
+    margin-bottom: 20px;
 }
-.zen-resources h3{
+.zen-resources h3 {
     background-color: #CA534A;
     padding: 4px;
     text-align: center;
     border-radius: 10px;
-    /* justify-content: center; */
     margin: 0 auto;
     width: 300px;
     margin-bottom: 20px;
 }
-.zen-resources ul >*{
-    display: flex;
-    flex-direction: row;
-    width: 200px;
+.zen-resources ul {
+    display: flex; /* Change to flex to arrange li in a row */
+    flex-direction: row; /* Set direction to row */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+.zen-resources ul > li { /* Apply styles to li elements */
     border-radius: 10px;
     background-color: #755452;
-    justify-content: space-around;
-    /* margin-bottom: 1000px; */
+    margin: 0 5px; /* Add some margin between items */
+    padding: 10px; /* Add some padding for better appearance */
+    margin: 0 auto;
+    list-style: none;
 }
